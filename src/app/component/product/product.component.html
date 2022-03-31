@@ -1,0 +1,14 @@
+<!--Displays all the products along with their description in the front page -->
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.picture}}" (click)="addtocart(item)">
+                <h6 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h6>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">Color: {{item.color}}</p>
+                <p><strong>Price: </strong>${{item.price}}</p>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
